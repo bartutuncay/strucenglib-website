@@ -41,7 +41,7 @@ Type `StrucEngLibInstallDependencies` in Rhino command line to open the dialog s
 <figcaption>StrucEng Library Dependency Installer for Ansys</figcaption>
 </figure>
 
-Select __Select Directory__ and choose your Anacoda installation path ([Prerequisites](../prerequisites)). Create a new environment with __Create Environment__.
+Select __Select Directory__ and choose your Anaconda installation path ([Prerequisites](prerequisites.md)). Create a new environment with __Create Environment__.
 The StrucEngLib Plugin issues Anaconda to create a new virtual environment and
 install all required Python dependencies. Hit __Install for Ansys__ to download the software packages. The installation may take some minutes. 
 

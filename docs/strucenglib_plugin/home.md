@@ -9,7 +9,7 @@ masonry.
 We currently implement Rhinoceros 3D support for the following FEA Analysis solvers:
 <style>
 .grid-cols-2 {
-    width: 100%;
+    width: 60%;
     height: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);

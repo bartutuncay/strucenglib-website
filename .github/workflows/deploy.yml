@@ -1,65 +1,57 @@
 name: Build Website
+
 on:
   push:
     branches:
-    - master
-  
+      - master
   workflow_dispatch:
 
 permissions:
-   contents: write
-   
+  contents: write
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
-    name: Deploy docs
+    name: Build and deploy docs
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout main
-        uses: actions/checkout@v2
-    
+      - name: Checkout website
+        uses: actions/checkout@v4
 
-      - name: Deploy docs
-        uses: mhausenblas/mkdocs-deploy-gh-pages@master
-        # Or use mhausenblas/mkdocs-deploy-gh-pages@nomaterial to build without the mkdocs-material theme
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CONFIG_FILE: mkdocs.yml
-          EXTRA_PACKAGES: build-base
-          CUSTOM_DOMAIN: strucenglib.ethz.ch
-          REQUIREMENTS: .github/requirements.txt
-          
-      - name: fix-permissions
-        run: |   
-         sudo chmod 777 -R ./site
-         
-      - name: add-compas-doc
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: .github/requirements.txt
+
+      - name: Install documentation dependencies
+        run: pip install --requirement .github/requirements.txt
+
+      - name: Build website with ProperDocs
+        run: properdocs build --strict
+
+      - name: Add COMPAS API documentation
         run: |
-          git clone https://github.com/StrucEng-Library-kfmresearch/strucenglib-website.git compas
-          cd compas
-          git checkout docs/compas
-          ls -al
-          cd ../
+          git clone --depth 1 --single-branch --branch docs/compas \
+            https://github.com/StrucEng-Library-kfmresearch/strucenglib-website.git compas
           mkdir -p site/docs
-          cp -rf compas/docs/* site/docs/
-          ls -al site/docs
+          cp -R compas/docs/. site/docs/
 
-      - name: add-compas_fea-doc
+      - name: Add COMPAS FEA API documentation
         run: |
-          git clone https://github.com/StrucEng-Library-kfmresearch/strucenglib-website.git compas_fea
-          cd compas_fea
-          git switch docs/compas_fea
-          ls -al
-          cd ../
+          git clone --depth 1 --single-branch --branch docs/compas_fea \
+            https://github.com/StrucEng-Library-kfmresearch/strucenglib-website.git compas_fea
           mkdir -p site/docs
-          cp -rf compas_fea/docs/* site/docs/
-          ls -al site/docs
+          cp -R compas_fea/docs/. site/docs/
 
-      - name: deploy-mkdocs-with-compas-doc
-        uses: peaceiris/actions-gh-pages@v3
-        # If you're changing the branch from main,
-        # also change the `master` in `refs/heads/master`
-        # below accordingly.
+      - name: Deploy website to GitHub Pages
         if: ${{ github.ref == 'refs/heads/master' }}
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site
+          cname: strucenglib.ethz.ch

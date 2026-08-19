@@ -1,29 +1,28 @@
 
 # Struc_Eng_Library_Website
 
-This website is built with [mkdocs](https://www.mkdocs.org/). A [Github Runner](https://github.com/StrucEng-Library-kfmresearch/strucenglib-website/actions/workflows/deploy.yml) redeploys the website on a new commit.
+This website is built with [ProperDocs](https://properdocs.org/) and the [MaterialX theme](https://jaywhj.github.io/mkdocs-materialx/). A [GitHub Actions workflow](https://github.com/StrucEng-Library-kfmresearch/strucenglib-website/actions/workflows/deploy.yml) redeploys the website after a commit to `master`.
 
 
 ## Files and Directories
 ```
 ./docs..........: Markdown files
 ./docs/assets...: Static assets (images)
-./overrides.....: html files to overwrite default template, landing page
-./mkdocs.yml....: mkdocs config file
+./properdocs.yml: ProperDocs configuration and website navigation
 ```
 
 ## Edit website 
-Navigation hierarchy is changed in [mkdocs.yml](mkdocs.yml) file. It resembles the file structure in the [./docs](./docs) folder.  
+The navigation hierarchy is changed in [properdocs.yml](properdocs.yml). It resembles the file structure in the [./docs](./docs) folder.
 
 <p align="left">
 <img src="https://user-images.githubusercontent.com/2311941/196964646-1871193b-8af9-4129-94d0-f02bd015379e.png" alt="strucenglib" width="400"/>
 </p>
 
-In the example image above, the navigation entry 'See in Action' will serve the file action.md.
+In the example image above, the navigation entry `See in Action` serves the file `action.md`.
 
 ## Edit a Page
 The content pages are written in markdown and are available in the [./docs](./docs) folder.
-Edit a markdown file in the Github file editor. Changes are redeployed upon a new commit. The status of the update of the changes can be found under the Github tab [Action](https://github.com/StrucEng-Library-kfmresearch/strucenglib-website/actions)
+Edit a Markdown file in the GitHub file editor. Changes are redeployed after a commit to `master`. Deployment status is shown under [GitHub Actions](https://github.com/StrucEng-Library-kfmresearch/strucenglib-website/actions).
 
 
 
@@ -33,7 +32,7 @@ Edit a markdown file in the Github file editor. Changes are redeployed upon a ne
 
 
 ## Markdown Documentation
-https://squidfunk.github.io/mkdocs-material/reference/images/
+ProperDocs uses Python-Markdown. See [Writing your docs](https://properdocs.org/user-guide/writing-your-docs/) and the [MaterialX documentation](https://jaywhj.github.io/mkdocs-materialx/).
 
 
 ## Developer Notes
@@ -46,18 +45,18 @@ Install python 3 and pip.
 
 # 1. create new virtual environment (optional)
 
-# 2. open Anaconda prompt and go to our directory wehre the clodnes code from the strucenglib-website is saved (use command cd)
+# 2. Open a terminal and change to the cloned strucenglib-website directory.
 
 # 3. install dependencies
 pip install -r ./.github/requirements.txt
 
 # 4. serve content
-mkdocs serve
+properdocs serve
 
 # 5. Merge/Push in Master
 
 ```
 
 ## Runners
-- Build Website: Builds mkdocs, commits changes to github-pages branch
+- Build Website: Builds ProperDocs and publishes the result to the GitHub Pages branch
 - pages-build-deployment: Pushes github pages to server

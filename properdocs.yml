@@ -1,0 +1,117 @@
+site_name: StrucEng Library
+site_url: https://strucenglib.ethz.ch
+site_description: Open-source tools for structural analysis of concrete and masonry.
+
+repo_name: StrucEng-Library-kfmresearch/strucenglib-website
+repo_url: https://github.com/StrucEng-Library-kfmresearch/strucenglib-website
+edit_uri: edit/master/docs/
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      cache_safe: true
+
+theme:
+  name: materialx
+  logo: assets/website/logo-web-5.svg
+  features:
+    - announce.dismiss
+    - content.code.annotate
+    - content.tabs.link
+    - content.tooltips
+    - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/StrucEng-Library-kfmresearch
+      name: StrucEng Library on GitHub
+
+copyright: Copyright &copy; 2022 and later, The StrucEng Library Authors
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+nav:
+  - Home: index.md
+  - See in Action: action.md
+  - Rhinoceros 3D Plugin:
+      - Home: strucenglib_plugin/home.md
+      - Installation:
+          - Prerequisites: strucenglib_plugin/prerequisites.md
+          - Install for Abaqus: strucenglib_plugin/install_for_abaqus.md
+          - Install for Ansys: strucenglib_plugin/install_for_ansys.md
+      - Usage Guide:
+          - StrucEngLib Server: strucenglib_plugin/server.md
+          - Troubleshooting: strucenglib_plugin/usage/troubleshooting.md
+  - User Guide:
+      - Home: strucenglib_snippets/home.md
+      - Basics:
+          - Overview: strucenglib_snippets/basics/overview.md
+          - Workflow: strucenglib_snippets/basics/workflow.md
+      - Model:
+          - Import packages: strucenglib_snippets/actions/self_weight.md
+          - Initialization: strucenglib_snippets/actions/general.md
+          - Structure: strucenglib_snippets/actions/buildings.md
+          - Elements: strucenglib_snippets/actions/seismic.md
+          - Constraints: strucenglib_snippets/actions/fire.md
+          - Material models: strucenglib_snippets/actions/fire.md
+          - Loads: strucenglib_snippets/actions/fire.md
+          - Steps: strucenglib_snippets/actions/fire.md
+          - Graphical outputs: strucenglib_snippets/actions/fire.md
+      - Solver:
+          - Analysis: strucenglib_snippets/concrete_structures/material_models.md
+          - Inspection: strucenglib_snippets/concrete_structures/code_checks.md
+      - Postprocessing:
+          - Visualization: strucenglib_snippets/masonry_structures/material_models.md
+          - Data: strucenglib_snippets/masonry_structures/code_checks.md
+      - Examples:
+          - All functionalities: strucenglib_snippets/examples/all_functionalities.md
+  - Developer Guide:
+      - Home: compas_fea/home.md
+      - Basics: compas_fea/basics.md
+      - Structure: compas_fea/structure.md
+      - Nodes: compas_fea/nodes.md
+      - Elements: compas_fea/elements.md
+      - Sets: compas_fea/sets.md
+      - Materials: compas_fea/materials.md
+      - Sections: compas_fea/sections.md
+      - Properties: compas_fea/properties.md
+      - Loads: compas_fea/loads.md
+      - Displacements: compas_fea/displacements.md
+      - Steps: compas_fea/steps.md
+      - Analyses: compas_fea/analysis.md
+      - Developer Notes: compas_fea/dev_notes.md
+  - About: about.md
