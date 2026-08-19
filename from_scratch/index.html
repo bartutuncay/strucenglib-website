@@ -3,35 +3,93 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Spatial Reasoning with GNNs</title>
-    <meta name="description" content="Project page for Spatial Reasoning with Graph Neural Networks." />
+    <title>StrucEngLib</title>
+    <meta name="description" content="Home page." />
+    <script>
+      (() => {
+        try {
+          const savedTheme = localStorage.getItem("strucenglib-theme");
+
+          if (savedTheme === "light" || savedTheme === "dark") {
+            document.documentElement.dataset.theme = savedTheme;
+          }
+        } catch {
+          // The system preference remains the fallback when storage is unavailable.
+        }
+      })();
+    </script>
     <link rel="stylesheet" href="styles.css" />
+    <script src="search.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-header">
-      <a class="brand" href="#main-content">Spatial Reasoning with GNNs</a>
-      <nav class="nav-links" aria-label="Project sections">
-        <a href="#overview">Overview</a>
-        <a href="#method">Method</a>
-        <a href="#results">Results</a>
-        <a href="#links">Links</a>
-      </nav>
+      <a class="brand" href="#main-content">
+        <img
+          id="site-logo"
+          src="assets/logo-web-2.svg"
+          data-logo-light="assets/logo-web-2.svg"
+          data-logo-dark="assets/logo-web-2-d.svg"
+          alt="StrucEngLib"
+        />
+      </a>
+      <div class="header-actions">
+        <nav class="nav-links" aria-label="Project sections">
+          <!--<a href="#overview">Overview</a>-->
+          <a href="#method">Examples</a>
+          <a href="#results">ANSYS Plugin</a>
+          <a href="#results">Non-Linear Analysis</a>
+          <a href="#links">Documentation</a>
+          <a href="#links">Development Guide</a>
+          <a href="#links">About</a>
+        </nav>
+        <div class="site-search">
+          <label class="visually-hidden" for="search">Search website</label>
+          <input
+            type="search"
+            id="search"
+            placeholder="Search website..."
+            autocomplete="off"
+            spellcheck="false"
+            aria-controls="search-results"
+            aria-expanded="false"
+          />
+          <div id="search-results" class="search-results" hidden>
+            <p id="search-status" class="search-status" aria-live="polite"></p>
+            <ul class="search-results-list"></ul>
+          </div>
+        </div>
+        <button
+          id="theme-switch"
+          class="theme-switch"
+          type="button"
+          role="switch"
+          aria-checked="false"
+          aria-label="Use dark mode"
+        >
+          <span class="theme-switch-symbol" aria-hidden="true">&#9728;</span>
+          <span class="theme-switch-track" aria-hidden="true">
+            <span class="theme-switch-thumb"></span>
+          </span>
+          <span class="theme-switch-symbol" aria-hidden="true">&#9790;</span>
+        </button>
+      </div>
     </header>
 
     <main id="main-content">
       <section class="hero">
-        <p class="eyebrow">Research Project</p>
-        <h1>Spatial Reasoning with Graph Neural Networks</h1>
+        <p class="eyebrow">Overview</p>
+        <h1>StrucEng Library for Structural Analysis</h1>
         <p class="lede">
-          This project studies how graph-based models preserve global spatial
-          structure from paired egocentric images, visible point-cloud subgraphs,
-          and coarsened scene geometry.
+          The <b><span style="color: #55aa77;">StrucEng Library</span></b> is a collection of open-source tools for the analysis of
+          engineering structures, developed at ETH Zürich.
         </p>
-        <p class="button-row" aria-label="External links">
-          <span class="button button-disabled" aria-disabled="true">Repository coming soon</span>
-          <span class="button button-disabled" aria-disabled="true">Paper coming soon</span>
+        <div style="display: flex; justify-content: center;">
+        <p class="button-row" aria-label="External links" >
+          <span class="button button-disabled" aria-disabled="true">Install</span>
+          <span class="button button-disabled" aria-disabled="true">See Examples</span>
         </p>
+        </div>
         <p class="link-row">
           <a href="../code/readme.md">Project notes</a>
           <a href="../neurips_paper/main.tex">Paper draft</a>
@@ -41,7 +99,7 @@
 
       <section id="overview" class="section">
         <div class="section-heading">
-          <h2>Overview</h2>
+          <h2>The StrucEng Library Project</h2>
         </div>
         <p>
           The central question is whether visibility-aware geometric supervision
@@ -57,80 +115,55 @@
         </p>
       </section>
 
-      <section id="method" class="section method">
-        <div class="section-heading">
-          <h2>Method</h2>
-        </div>
-        <ol class="method-list">
-          <li>
-            <strong>Cross-modal autoencoding.</strong> Image and point-cloud
-            branches encode paired observations into matching latent vectors, with
-            reconstruction heads crossing between image and geometry.
-          </li>
-          <li>
-            <strong>Random-walk observations.</strong> Synthetic trajectories
-            generate RGB views, visible point-cloud slices, and camera-relative
-            metadata for sequential latent supervision.
-          </li>
-          <li>
-            <strong>Scene-graph localization.</strong> Latent observations are
-            matched against cluster embeddings from a coarsened global point-cloud
-            graph to predict translation and relative transforms.
-          </li>
-        </ol>
-      </section>
-
-      <section id="results" class="section results">
-        <div class="section-heading">
-          <h2>Current Evaluation Snapshot</h2>
-        </div>
-        <table>
-          <caption>
-            Baseline localization results from the current evaluation summary.
-          </caption>
-          <thead>
-            <tr>
-              <th scope="col">Model</th>
-              <th scope="col">Runs</th>
-              <th scope="col">Datasets</th>
-              <th scope="col">ATE RMSE Mean</th>
-              <th scope="col">RPE Translation Mean</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">VGGT-SLAM</th>
-              <td>31</td>
-              <td>7-Scenes, ETH3D</td>
-              <td>0.661 m</td>
-              <td>0.259 m</td>
-            </tr>
-            <tr>
-              <th scope="row">HLoc</th>
-              <td>25</td>
-              <td>ETH3D</td>
-              <td>0.721 m</td>
-              <td>0.976 m</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-      <section id="links" class="section">
-        <div class="section-heading">
-          <h2>Repository Links</h2>
-        </div>
-        <ul class="links-list">
-          <li><a href="../code/readme.md">Concept and implementation notes</a></li>
-          <li><a href="../neurips_paper/main.tex">Paper draft</a></li>
-          <li><a href="../results/EVALUATION.md">Evaluation protocol</a></li>
-          <li><a href="../results/eval_outputs/summary_by_model.csv">Model summary table</a></li>
-        </ul>
-      </section>
     </main>
 
     <footer class="site-footer">
       <p>Spatial Reasoning with GNNs</p>
     </footer>
+    <script>
+      (() => {
+        const root = document.documentElement;
+        const themeSwitch = document.querySelector("#theme-switch");
+        const siteLogo = document.querySelector("#site-logo");
+        const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+        const activeTheme = () =>
+          root.dataset.theme || (systemTheme.matches ? "dark" : "light");
+
+        const updateThemeControls = () => {
+          const theme = activeTheme();
+          const isDark = theme === "dark";
+          const nextTheme = isDark ? "light" : "dark";
+
+          themeSwitch.setAttribute("aria-checked", String(isDark));
+          themeSwitch.setAttribute("aria-label", `Use ${nextTheme} mode`);
+          themeSwitch.title = `Use ${nextTheme} mode`;
+          siteLogo.src = isDark
+            ? siteLogo.dataset.logoDark
+            : siteLogo.dataset.logoLight;
+        };
+
+        themeSwitch.addEventListener("click", () => {
+          const nextTheme = activeTheme() === "dark" ? "light" : "dark";
+          root.dataset.theme = nextTheme;
+
+          try {
+            localStorage.setItem("strucenglib-theme", nextTheme);
+          } catch {
+            // The selected theme still applies for the current page view.
+          }
+
+          updateThemeControls();
+        });
+
+        systemTheme.addEventListener("change", () => {
+          if (!root.dataset.theme) {
+            updateThemeControls();
+          }
+        });
+
+        updateThemeControls();
+      })();
+    </script>
   </body>
 </html>

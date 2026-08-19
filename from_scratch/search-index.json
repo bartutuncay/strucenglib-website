@@ -1,0 +1,12 @@
+[
+  {
+    "title": "StrucEng Library",
+    "url": "index.html",
+    "content": "Utilities for structural analysis of concrete and masonry StrucEng Library The StrucEng Library is a collection of open-source tools for the analysis of engineering structures, developed at ETH Zürich. Install See Examples Project notes Paper draft Evaluation notes"
+  },
+  {
+    "title": "The StrucEng Library Project",
+    "url": "index.html#overview",
+    "content": "The StrucEng Library Project The central question is whether visibility-aware geometric supervision can help learned representations capture global spatial structure. The repository currently contains a two-stage pipeline: first, cross-modal latent alignment between images and visible point-cloud graphs; second, localization of latent observations against a larger scene graph. Visibility metrics are useful because they depend on long-range spatial relationships. This makes them a natural way to evaluate locality bias and global reasoning in graph neural networks."
+  }
+]
