@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>StrucEngLib</title>
+    <meta name="description" content="Home page." />
+    <script src="../../theme-init.js"></script>
+    <link rel="stylesheet" href="../../styles.css" />
+    <style>
+      .related-links .panel {
+        display: grid;
+        place-items: center;
+        text-align: center;
+      }
+
+      .related-links .panel h3 {
+        margin-bottom: 0;
+      }
+
+      .related-links .panel h3 a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .related-links .panel {
+        background-color: var(--focustr);
+        border-color: var(--link);
+      }
+
+      .related-links .panel h3 a:hover {
+        color: var(--focus);
+        text-decoration: underline;
+      }
+    </style>
+    <script src="../../header.js" defer></script>
+    <script src="../../search.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <site-header></site-header>
+
+    <main id="main-content">
+      <section  class="section">
+        <p class="eyebrow" >About</p>
+        <h1>About the <span style="color: #55aa77;">StrucEng Library</span></h1>
+        <p class="lede">About the Project</p>
+        <p>The StrucEngLib is a open source framework for the numerical analysis of engineering structures, being developed at
+            the <span style="color: var(--focus);">Chair of Concrete Structures and Bridge Design</span> at ETH Zürich.
+            It offers a variety of material models (linear elastic, ideal plastic, nonlinear), load generators, geometry adapters,
+            verification and plotting tools. Currently, the library supports the ANSYS Workbench platform with Mechanical as the solver backend,
+            where StrucEngLib features are accessible as an extension. The package and models are packaged as a fully open-source Python-based framework 
+            aimed at facilitating collaboration in engineering research and industry.</p>
+      </section>
+    <section class="section">
+        <div class="section-heading">
+            <h2>Related Links</h2>
+          </div>
+        <div class="panel-grid related-links">
+            <article class="panel">
+              <h3><a href="https://github.com/StrucEng-Library">GitHub Project Page</a></h3>
+            </article>
+            <article class="panel">
+              <h3><a href="https://github.com/kfmResearch-NumericsTeam">Github Projects by kfmResearch Numerics Team</a></h3>
+            </article>
+            
+            <article class="panel">
+              <h3><a href="https://kaufmann.ibk.ethz.ch/">Chair of Concrete Structures and Bridge Design</a></h3>
+            </article>
+            <article class="panel">
+              <h3><a href="https://ibk.ethz.ch/">Institute of Structural Engineering</a></h3>
+            </article>
+            
+          </div>
+    </section>
+    <section class="section">
+        <div class="section-heading">
+            <h2>Team</h2>
+          </div>
+    </section>
+      
+    </main>
+
+    <footer class="site-footer">
+      <p>Copyright © 2026, The StrucEng Library Authors</p>
+    </footer>
+  </body>
+</html>

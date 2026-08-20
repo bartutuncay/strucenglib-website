@@ -1,12 +1,42 @@
 [
   {
-    "title": "StrucEng Library",
+    "title": "About the StrucEng Library",
+    "url": "content/about/about.html",
+    "content": "About About the StrucEng Library The StrucEngLib A"
+  },
+  {
+    "title": "Getting Started",
+    "url": "content/ansys_act/get_started.html",
+    "content": "Installation Getting Started The StrucEng Library ACT extension can be downloaded here. Please follow the instructions outlined below and feel free to report issues on our GitHub page. Note: currently only available on ETH Network Video Guide Requirements ANSYS Workbench Works best with 2026/R1 , backwards compatible. Get"
+  },
+  {
+    "title": "Installation",
+    "url": "content/ansys_act/get_started.html",
+    "content": "Installation"
+  },
+  {
+    "title": "Updates",
+    "url": "content/ansys_act/get_started.html",
+    "content": "Updates"
+  },
+  {
+    "title": "Verification",
+    "url": "content/ansys_act/sandwichmodel.html",
+    "content": "Sandwich Model Verification The StrucEng Library ACT extension can be downloaded here. Please follow the instructions outlined below and feel free to report issues on our GitHub page. Note: currently only available on ETH Network Video Guide Requirements Installation Updates"
+  },
+  {
+    "title": "Getting Started",
+    "url": "content/ansys_act/seismic.html",
+    "content": "Installation Getting Started The StrucEng Library ACT extension can be downloaded here. Please follow the instructions outlined below and feel free to report issues on our GitHub page. Note: currently only available on ETH Network Video Guide Requirements Installation Updates"
+  },
+  {
+    "title": "Open Source and Validated Structural Analysis for Concrete and Masonry",
     "url": "index.html",
-    "content": "Utilities for structural analysis of concrete and masonry StrucEng Library The StrucEng Library is a collection of open-source tools for the analysis of engineering structures, developed at ETH Zürich. Install See Examples Project notes Paper draft Evaluation notes"
+    "content": "Overview Open Source and Validated Structural Analysis for Concrete and Masonry The StrucEng Library is a collection of open source tools for the analysis of engineering structures, developed at ETH Zürich."
   },
   {
     "title": "The StrucEng Library Project",
-    "url": "index.html#overview",
-    "content": "The StrucEng Library Project The central question is whether visibility-aware geometric supervision can help learned representations capture global spatial structure. The repository currently contains a two-stage pipeline: first, cross-modal latent alignment between images and visible point-cloud graphs; second, localization of latent observations against a larger scene graph. Visibility metrics are useful because they depend on long-range spatial relationships. This makes them a natural way to evaluate locality bias and global reasoning in graph neural networks."
+    "url": "index.html",
+    "content": "Install See Examples The StrucEng Library Project ANSYS Extension StrucEngLib can be used directly within ANSYS Mechanical, without ever leaving the simulation page. Details Non-Linear Analysis Backend Most advanced analysis methods behind the processing workflow. Details Validated StrucEngLib is based on research outputs and numerically validated. Details Open Source All workflows and extensions are free and under open-source licensing. Users can contribute to the development of the library. Details"
   }
 ]

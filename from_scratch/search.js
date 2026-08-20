@@ -92,7 +92,7 @@
       const excerpt = document.createElement("span");
 
       link.className = "search-result-link";
-      link.href = entry.url;
+      link.href = new URL(entry.url, searchIndexUrl).href;
       title.className = "search-result-title";
       title.textContent = entry.title;
       excerpt.className = "search-result-excerpt";
