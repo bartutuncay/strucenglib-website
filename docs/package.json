@@ -1,0 +1,8 @@
+{
+  "name": "strucenglib-website",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build-search-index.mjs",
+    "build:search": "node scripts/build-search-index.mjs"
+  }
+}
