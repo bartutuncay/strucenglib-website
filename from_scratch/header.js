@@ -54,7 +54,7 @@
                 <a href="${siteUrl("content/ansys_act/get_started.html")}">
                   ACT User Reference
                 </a>
-                <a href="${siteUrl("content/ansys_act/sandwichmodel.html")}">
+                <a href="${siteUrl("content/documentation/sandwichmodel.html")}">
                   Usermat User Reference
                 </a>
                 <a href="${siteUrl("content/ansys_act/sandwichmodel.html")}">

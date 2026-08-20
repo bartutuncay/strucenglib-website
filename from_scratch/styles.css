@@ -27,14 +27,15 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
-    color-scheme: dark;
-    --text: #e5e7eb;
-    --muted: #cbd5e1;
-    --border: #475569;
-    --background: #111827;
-    --surface: #1f2937;
-    --link: #93c5fd;
-    --focus: #fbbf24;
+    color-scheme: light;
+    --text: #1f2933;
+    --muted: #4b5563;
+    --border: #cbd5e1;
+    --background: #fafaf4;
+    --surface: #f8fafc70;
+    --link: #55aa77;
+    --focus: #44bb77;
+    --focustr: #44bb7720;
   }
 }
 
