@@ -20,14 +20,20 @@
           <details class="nav-dropdown">
             <summary>Examples</summary>
             <div class="nav-dropdown-menu">
-                <a href="${siteUrl("content/ansys_act/get_started.html")}">
-                  Get Started
+                <a href="${siteUrl("content/examples/overview.html")}">
+                  Overview
                 </a>
-                <a href="${siteUrl("content/ansys_act/sandwichmodel.html")}">
-                  Sandwich Model
+                <a href="${siteUrl("content/examples/masonry_wall.html")}">
+                  Masonry Wall
                 </a>
-                <a href="${siteUrl("content/ansys_act/seismic.html")}">
-                  Seismic
+                <a href="${siteUrl("content/examples/hybrid_wall.html")}">
+                  Hybrid Wall
+              </a>
+                <a href="${siteUrl("content/examples/walls_slab.html")}">
+                  Single-Storey Structure
+              </a>
+                <a href="${siteUrl("content/examples/building.html")}">
+                  Building Case Study
               </a>
             </div>
           </details>
@@ -51,18 +57,18 @@
           <details class="nav-dropdown">
             <summary>Documentation</summary>
             <div class="nav-dropdown-menu">
-                <a href="${siteUrl("content/ansys_act/get_started.html")}">
+                <a href="${siteUrl("content/documentation/act_reference.html")}">
                   ACT User Reference
                 </a>
-                <a href="${siteUrl("content/documentation/sandwichmodel.html")}">
+                <a href="${siteUrl("content/documentation/usermat_reference.html")}">
                   Usermat User Reference
                 </a>
-                <a href="${siteUrl("content/ansys_act/sandwichmodel.html")}">
+                <a href="${siteUrl("content/documentation/usermat_reference.html")}">
                   Videos
                 </a>
-                <a href="${siteUrl("content/ansys_act/seismic.html")}">
+                <a href="${siteUrl("content/documentation/usermat_reference.html")}">
                   ACT Backend
-              </a>
+                </a>
             </div>
           </details>
 

@@ -2,17 +2,32 @@
   {
     "title": "About the StrucEng Library",
     "url": "content/about/about.html",
-    "content": "About About the StrucEng Library The StrucEngLib A"
+    "content": "About About the StrucEng Library About the Project The StrucEngLib is a open source framework for the numerical analysis of engineering structures, being developed at the Chair of Concrete Structures and Bridge Design at ETH Zürich. It offers a variety of material models (linear elastic, ideal plastic, nonlinear), load generators, geometry adapters, verification and plotting tools. Currently, the library supports the ANSYS Workbench platform with Mechanical as the solver backend, where StrucEngLib features are accessible as an extension. The package and models are packaged as a fully open source Python-based framework aimed at facilitating collaboration between engineering research and industry."
+  },
+  {
+    "title": "Related Links",
+    "url": "content/about/about.html",
+    "content": "Related Links GitHub Project Page GitHub Projects by kfmResearch Numerics Team Chair of Concrete Structures and Bridge Design Institute of Structural Engineering"
+  },
+  {
+    "title": "Team",
+    "url": "content/about/about.html",
+    "content": "Team"
   },
   {
     "title": "Getting Started",
     "url": "content/ansys_act/get_started.html",
-    "content": "Installation Getting Started The StrucEng Library ACT extension can be downloaded here. Please follow the instructions outlined below and feel free to report issues on our GitHub page. Note: currently only available on ETH Network Video Guide Requirements ANSYS Workbench Works best with 2026/R1 , backwards compatible. Get"
+    "content": "Installation Getting Started The StrucEng Library ACT extension can be downloaded here . Please follow the instructions outlined below and feel free to report issues on our GitHub page. Note: currently only available on ETH Network Video Guide"
   },
   {
     "title": "Installation",
     "url": "content/ansys_act/get_started.html",
     "content": "Installation"
+  },
+  {
+    "title": "Requirements",
+    "url": "content/ansys_act/get_started.html",
+    "content": "Requirements ANSYS Workbench Works best with 2026/R1 , backwards compatible. Get"
   },
   {
     "title": "Updates",
@@ -28,6 +43,56 @@
     "title": "Getting Started",
     "url": "content/ansys_act/seismic.html",
     "content": "Installation Getting Started The StrucEng Library ACT extension can be downloaded here. Please follow the instructions outlined below and feel free to report issues on our GitHub page. Note: currently only available on ETH Network Video Guide Requirements Installation Updates"
+  },
+  {
+    "title": "Installation and loading",
+    "url": "content/documentation/act_reference.html#installation",
+    "content": "Installation and loading Download the current extension package from the project distribution location. Open the ANSYS extension manager and install the package. Enable the StrucEngLib extension for the current Workbench project. Open Mechanical and confirm that the extension tools are available. For release-specific requirements and the latest package location, see Getting Started ."
+  },
+  {
+    "title": "Workbench interface",
+    "url": "content/documentation/act_reference.html#interface",
+    "content": "Workbench interface Extension commands are grouped around the analysis setup they affect. Select an object in the Mechanical tree before adding a StrucEngLib item so that it is attached to the intended analysis context. Typical project sequence Prepare geometry, materials, contacts, and the analysis system. Add the required StrucEngLib object from the extension tools. Complete the object properties and resolve any validation messages. Generate or update the analysis data, then solve in Mechanical. Review standard ANSYS results together with extension outputs."
+  },
+  {
+    "title": "Overview",
+    "url": "content/documentation/act_reference.html#overview",
+    "content": "Overview The ACT extension exposes StrucEngLib workflows within ANSYS Workbench and Mechanical. Use this guide as the entry point for the extension interface; the Usermat reference covers the material model inputs and result quantities in more detail. Before you begin Confirm that your ANSYS release is supported and that you can access the extension package described in the getting-started guide."
+  },
+  {
+    "title": "Troubleshooting",
+    "url": "content/documentation/act_reference.html#troubleshooting",
+    "content": "Troubleshooting The extension is not visible Check that the package is installed, enabled for the current project, and compatible with the running ANSYS release. Restart Workbench after changing extension-manager settings. An object reports incomplete input Review the selected tree location and all required properties. If the model was changed after the object was created, update its references before solving again."
+  },
+  {
+    "title": "Objects and workflows",
+    "url": "content/documentation/act_reference.html#workflows",
+    "content": "Objects and workflows Each extension object should document its required parent object, editable properties, generated solver data, and available outputs. The workflow pages provide complete examples for common analysis types. Sandwich model workflow Seismic analysis workflow"
+  },
+  {
+    "title": "Input parameters",
+    "url": "content/documentation/usermat_reference.html#inputs",
+    "content": "Input parameters Define all model inputs in a consistent unit system. A complete model entry should state the parameter symbol, physical meaning, unit, accepted range, and default behavior when applicable. Validate related parameter groups together; a value can be valid in isolation while still producing an inconsistent material definition."
+  },
+  {
+    "title": "Model scope",
+    "url": "content/documentation/usermat_reference.html#model-scope",
+    "content": "Model scope Before selecting a model, confirm that its dimensional assumptions, supported element formulations, stress state, and intended material behavior match the analysis. Record the model version with the project so that the calculation remains reproducible. Applicability checklist Supported analysis type and element formulation Expected unit system and parameter conventions Required material calibration data Known limitations and regularization requirements"
+  },
+  {
+    "title": "Output quantities",
+    "url": "content/documentation/usermat_reference.html#outputs",
+    "content": "Output quantities Output entries should distinguish directly computed quantities from derived values. State variables used for restart or history-dependent behavior should be documented separately from user-facing results. Stress and strain measures and their coordinate system Damage, plasticity, or other history indicators Convergence or status flags exposed by the implementation Energy quantities used for verification"
+  },
+  {
+    "title": "Overview",
+    "url": "content/documentation/usermat_reference.html#overview",
+    "content": "Overview User material models extend the constitutive behavior available to an analysis. This reference is organized so that every model can use the same sequence: applicability, inputs, internal state, outputs, and verification. Model-specific values Parameter names, units, admissible ranges, and defaults should be taken from the reference entry for the exact model version used in the analysis."
+  },
+  {
+    "title": "Verification",
+    "url": "content/documentation/usermat_reference.html#verification",
+    "content": "Verification Verify a material definition on a small, controlled model before using it in a full structure. Compare the response with an analytical result, a published benchmark, or an independently implemented calculation. Check the initial elastic response and unit consistency. Exercise each expected loading branch and unloading path. Review state variables and energy balance across load steps. Repeat the check with a refined increment or mesh where relevant."
   },
   {
     "title": "Open Source and Validated Structural Analysis for Concrete and Masonry",

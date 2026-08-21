@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ACT User Reference · StrucEngLib</title>
+    <meta
+      name="description"
+      content="Reference guide for using the StrucEngLib ACT extension in ANSYS Workbench."
+    />
+    <script src="../../theme-init.js"></script>
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="documentation.css" />
+    <script src="../../header.js" defer></script>
+    <script src="../../search.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#documentation-article">Skip to documentation</a>
+    <site-header></site-header>
+
+    <main id="main-content" class="documentation-main">
+      <div class="documentation-layout">
+        <aside class="documentation-sidebar" aria-label="Documentation navigation">
+          <p class="documentation-label">Documentation</p>
+          <nav>
+            <ul class="documentation-nav">
+              <li>
+                <a href="act_reference.html" aria-current="page">ACT User Reference</a>
+                <ul>
+                  <li><a href="#overview">Overview</a></li>
+                  <li><a href="#installation">Installation and loading</a></li>
+                  <li><a href="#interface">Workbench interface</a></li>
+                  <li><a href="#workflows">Objects and workflows</a></li>
+                  <li><a href="#troubleshooting">Troubleshooting</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="usermat_reference.html">Usermat User Reference</a>
+                <ul>
+                  <li><a href="usermat_reference.html#overview">Overview</a></li>
+                  <li><a href="usermat_reference.html#model-scope">Model scope</a></li>
+                  <li><a href="usermat_reference.html#inputs">Input parameters</a></li>
+                  <li><a href="usermat_reference.html#outputs">Output quantities</a></li>
+                  <li><a href="usermat_reference.html#verification">Verification</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+
+        <article id="documentation-article" class="documentation-article">
+          <header>
+            <p class="eyebrow">ANSYS ACT extension</p>
+            <h1>ACT User Reference</h1>
+            <p class="lede">
+              A practical reference for installing the extension, finding its tools,
+              and moving through a StrucEngLib analysis in ANSYS Workbench.
+            </p>
+          </header>
+
+          <nav class="documentation-pagination" aria-label="Documentation pages">
+            <span class="documentation-page-link-disabled" aria-disabled="true">
+              <span class="documentation-page-direction">Previous</span>
+              <span class="documentation-page-title">Start of documentation</span>
+            </span>
+            <a class="documentation-page-link documentation-page-link-next" href="usermat_reference.html">
+              <span class="documentation-page-direction">Next</span>
+              <span class="documentation-page-title">Usermat User Reference →</span>
+            </a>
+          </nav>
+
+          <div class="documentation-content">
+            <section id="overview" class="documentation-section">
+              <h2>Overview</h2>
+              <p>
+                The ACT extension exposes StrucEngLib workflows within ANSYS
+                Workbench and Mechanical. Use this guide as the entry point for
+                the extension interface; the Usermat reference covers the material
+                model inputs and result quantities in more detail.
+              </p>
+              <div class="documentation-note">
+                <p><strong>Before you begin</strong></p>
+                <p>
+                  Confirm that your ANSYS release is supported and that you can
+                  access the extension package described in the getting-started guide.
+                </p>
+              </div>
+            </section>
+
+            <section id="installation" class="documentation-section">
+              <h2>Installation and loading</h2>
+              <ol>
+                <li>Download the current extension package from the project distribution location.</li>
+                <li>Open the ANSYS extension manager and install the package.</li>
+                <li>Enable the StrucEngLib extension for the current Workbench project.</li>
+                <li>Open Mechanical and confirm that the extension tools are available.</li>
+              </ol>
+              <p>
+                For release-specific requirements and the latest package location,
+                see <a href="../ansys_act/get_started.html">Getting Started</a>.
+              </p>
+            </section>
+
+            <section id="interface" class="documentation-section">
+              <h2>Workbench interface</h2>
+              <p>
+                Extension commands are grouped around the analysis setup they affect.
+                Select an object in the Mechanical tree before adding a StrucEngLib
+                item so that it is attached to the intended analysis context.
+              </p>
+              <h3>Typical project sequence</h3>
+              <ul>
+                <li>Prepare geometry, materials, contacts, and the analysis system.</li>
+                <li>Add the required StrucEngLib object from the extension tools.</li>
+                <li>Complete the object properties and resolve any validation messages.</li>
+                <li>Generate or update the analysis data, then solve in Mechanical.</li>
+                <li>Review standard ANSYS results together with extension outputs.</li>
+              </ul>
+            </section>
+
+            <section id="workflows" class="documentation-section">
+              <h2>Objects and workflows</h2>
+              <p>
+                Each extension object should document its required parent object,
+                editable properties, generated solver data, and available outputs.
+                The workflow pages provide complete examples for common analysis types.
+              </p>
+              <ul>
+                <li><a href="../ansys_act/sandwichmodel.html">Sandwich model workflow</a></li>
+                <li><a href="../ansys_act/seismic.html">Seismic analysis workflow</a></li>
+              </ul>
+            </section>
+
+            <section id="troubleshooting" class="documentation-section">
+              <h2>Troubleshooting</h2>
+              <h3>The extension is not visible</h3>
+              <p>
+                Check that the package is installed, enabled for the current project,
+                and compatible with the running ANSYS release. Restart Workbench after
+                changing extension-manager settings.
+              </p>
+              <h3>An object reports incomplete input</h3>
+              <p>
+                Review the selected tree location and all required properties. If the
+                model was changed after the object was created, update its references
+                before solving again.
+              </p>
+            </section>
+          </div>
+
+          <nav class="documentation-pagination documentation-pagination-bottom" aria-label="Documentation pages">
+            <span class="documentation-page-link-disabled" aria-disabled="true">
+              <span class="documentation-page-direction">Previous</span>
+              <span class="documentation-page-title">Start of documentation</span>
+            </span>
+            <a class="documentation-page-link documentation-page-link-next" href="usermat_reference.html">
+              <span class="documentation-page-direction">Next</span>
+              <span class="documentation-page-title">Usermat User Reference →</span>
+            </a>
+          </nav>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>Copyright © 2026, The StrucEng Library Authors</p>
+    </footer>
+  </body>
+</html>

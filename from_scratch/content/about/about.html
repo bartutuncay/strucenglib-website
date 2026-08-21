@@ -9,30 +9,67 @@
     <link rel="stylesheet" href="../../styles.css" />
     <style>
       .related-links .panel {
-        display: grid;
-        place-items: center;
-        text-align: center;
+        padding: 0;
+        font-size: 0.8rem;
       }
 
-      .related-links .panel h3 {
-        margin-bottom: 0;
-      }
-
-      .related-links .panel h3 a {
+      .related-links .related-link {
+        align-items: center;
         color: var(--muted);
+        display: flex;
+        gap: 0.6rem;
+        height: 100%;
+        justify-content: center;
+        padding: 1rem;
         text-decoration: none;
       }
 
-      .related-links .panel {
-        background-color: var(--focustr);
-        padding: 1rem;
-        border-color: var(--link);
+      .related-links .related-link:focus-visible {
+        outline: 3px solid var(--focus);
+        outline-offset: -3px;
       }
 
-      .related-links .panel h3 a:hover {
+      .related-links .related-link:hover {
         color: var(--text);
         text-decoration: underline;
       }
+
+      .related-links .related-link h3 {
+        flex: 0 1 210px;
+        margin: 0;
+        text-align: left;
+      }
+
+      .related-icon {
+        align-items: center;
+        display: flex;
+        height: 64px;
+        justify-content: center;
+        width: 72px;
+        overflow: hidden;
+        flex: 0 0 72px;
+      }
+
+      .related-icon img {
+        display: block;
+        max-height: 100%;
+        max-width: 100%;
+        transform: scale(var(--icon-zoom, 1));
+        transform-origin: center;
+      }
+
+      .related-icon .icon-dark {
+        display: none;
+      }
+
+      :root[data-theme="dark"] .related-icon .icon-light {
+        display: none;
+      }
+
+      :root[data-theme="dark"] .related-icon .icon-dark {
+        display: block;
+      }
+
     </style>
     <script src="../../header.js" defer></script>
     <script src="../../search.js" defer></script>
@@ -59,17 +96,40 @@
           </div>
         <div class="panel-grid related-links">
             <article class="panel">
-              <h3><a href="https://github.com/StrucEng-Library">GitHub Project Page</a></h3>
+              <a class="related-link" href="https://github.com/StrucEng-Library">
+                <span class="related-icon" style="--icon-zoom:0.8" aria-hidden="true">
+                  <img class="icon-light" src="../../assets/Octicons-mark-github.svg" alt="" />
+                  <img class="icon-dark" src="../../assets/github-logo-light.svg" alt="" />
+                </span>
+                <h3>GitHub Project Page</h3>
+              </a>
             </article>
             <article class="panel">
-              <h3><a href="https://github.com/kfmResearch-NumericsTeam">GitHub Projects by kfmResearch Numerics Team</a></h3>
+              <a class="related-link" href="https://github.com/kfmResearch-NumericsTeam">
+                <span class="related-icon" style="--icon-zoom:0.8" aria-hidden="true">
+                  <img class="icon-light" src="../../assets/Octicons-mark-github.svg" alt="" />
+                  <img class="icon-dark" src="../../assets/github-logo-light.svg" alt="" />
+                </span>
+                <h3>GitHub Projects by kfmResearch Numerics Team</h3>
+              </a>
             </article>
             
             <article class="panel">
-              <h3><a href="https://kaufmann.ibk.ethz.ch/">Chair of Concrete Structures and Bridge Design</a></h3>
+              <a class="related-link" href="https://kaufmann.ibk.ethz.ch/">
+                <span class="related-icon" style="--icon-zoom:1.8" aria-hidden="true">
+                  <img class="icon-light" src="../../assets/kfm-dark.png"/>
+                  <img class="icon-dark" src="../../assets/kfm-light.png"/>
+                </span>
+                <h3>Chair of Concrete Structures and Bridge Design</h3>
+              </a>
             </article>
             <article class="panel">
-              <h3><a href="https://ibk.ethz.ch/">Institute of Structural Engineering</a></h3>
+              <a class="related-link" href="https://ibk.ethz.ch/">
+                <span class="related-icon" aria-hidden="true">
+                  <img src="../../assets/ibk_Logo.svg"/>
+                </span>
+                <h3>Institute of Structural Engineering</h3>
+              </a>
             </article>
             
           </div>

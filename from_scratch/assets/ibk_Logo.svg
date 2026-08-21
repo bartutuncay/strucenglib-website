@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 725 349" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:square;stroke-miterlimit:10;">
+    <g id="Page-1" serif:id="Page 1" transform="matrix(4.166667,0,0,4.166667,0,0)">
+        <rect x="0" y="0" width="173.879" height="83.617" style="fill:none;"/>
+        <clipPath id="_clip1">
+            <rect x="0" y="0" width="173.879" height="83.617"/>
+        </clipPath>
+        <g clip-path="url(#_clip1)">
+            <g id="Ebene-1" serif:id="Ebene 1">
+                <g transform="matrix(-1,0,0,1,18.5936,3.4503)">
+                    <path d="M-31.098,75.325L14.98,75.325L0,0L-46.078,0L-31.098,75.325Z" style="fill:rgb(166,206,218);fill-rule:nonzero;stroke:black;stroke-width:1.42px;"/>
+                </g>
+                <g transform="matrix(-1,0,0,1,71.3167,3.4503)">
+                    <path d="M-31.098,75.325L14.98,75.325L0,0L-46.078,0L-31.098,75.325Z" style="fill:rgb(166,206,218);fill-rule:nonzero;stroke:black;stroke-width:1.42px;"/>
+                </g>
+                <g transform="matrix(-1,0,0,1,124.0428,3.4503)">
+                    <path d="M-31.099,75.325L14.979,75.325L-0.001,0L-46.078,0L-31.099,75.325Z" style="fill:rgb(166,206,218);fill-rule:nonzero;stroke:black;stroke-width:1.42px;"/>
+                </g>
+                <g>
+                    <text x="22.657px" y="65.542px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:68px;">i</text>
+                    <text x="63.303px" y="65.406px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:68px;">b</text>
+                    <text x="116.497px" y="65.202px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:68px;">k</text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
